@@ -1,4 +1,6 @@
-#  Ignore node_modules directory
-node_modules/
+# ingnore file 
 
-# other entries...
+node_modules/
+.env
+dist/
+.DS_Store
