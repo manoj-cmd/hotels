@@ -2,10 +2,14 @@
 const mongoose = require('mongoose');
 // mongoose db collection url
 
-const mongooseURL = 'mongodb://localhost:27017/hotels' // replace mydatabase to your database name
+//const mongooseURL = process.env.MONGODB_URL_LOCAL; // replace mydatabase to your database name
+//const mongooseURL = 'mongodb+srv://HelloWord1234:HelloWord1234@cluster0.yiabmsl.mongodb.net/'
+require('dotenv').config();
+const mongooseURL = process.env.MONGODB_URL;
+                     
 mongoose.connect(mongooseURL, {
-    //useNewUrlParser: true,
-    //useUnifiedTapology: true,
+    useNewUrlParser: true,
+  useUnifiedTopology: true
 })
 
 const db = mongoose.connection;
