@@ -14,7 +14,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())  // req.body
 
 
-
+app.get('/', (req, res) => {
+     res.send("Welcome to Hotel App")
+})
 
 
 // import the router file
